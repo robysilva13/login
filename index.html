@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style> 
+
+
+    * { box-sizing: border-box;
+       
+
+        
+    }
+   
+    body{
+
+        background-color: white;
+        
+    }
+
+
+    .fundo{
+
+        padding: 300px 600px;
+        background-image: url(6057a14fe16b185.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: 6%;
+        top: 4%
+    }
+
+
+    .form{
+        padding: 70px 140px;
+        border: solid black 2px;
+        background-color: 	#778899;
+        position: fixed;
+        left: 58%;
+        top: 10%;
+        float: left;
+        box-shadow: rgb(160, 149, 149) 07px 06px 8px 8px  ;
+
+    }
+
+    .text{
+        color: black;
+        background-color: 	#e6e6fa;
+        display: grid;
+        position: absolute;
+        left: 15%;
+        top: 29%;
+        padding: 50px;
+        width: 30%
+;
+
+    }
+
+    input{
+        width: 150%;
+        padding: 3%;
+        right: 30%;
+        position: relative;
+        
+    }
+
+    #proteger{
+        display: grid;
+        right: 100%;
+        
+        
+    }
+
+    .check{
+        position: absolute;
+        top: 68%;
+        left: 66%;
+       
+        
+
+        
+    }
+
+    #check {
+        font-size: 12px;
+    }
+
+    button{
+        border-radius: 5ch;
+        background-color: black ;
+        color: white;
+        width: 40%;
+    }
+
+    #con{
+        position: relative;
+        left: 20%;
+
+    }
+
+    @font-face {
+        font-family: face;
+        src: url(PermanentMarker-Regular.ttf);
+    }
+
+    h1{
+        font-family: 'face', Courier, monospace;
+        text-align: center;
+    }
+
+    p{
+        font-size: 20px;
+        
+    }
+
+    
+    
+    </style>
+    
+    <title>Login</title>
+
+    
+</head>
+
+<body>
+
+   
+
+    <div class="fundo">
+    </div>
+
+    <div class="text">
+        <h1>Seja bem vindo! </h1>
+        <p>Para efetuar o cadastro pedimos que prencha o formulario ao lado com informações corretas.</p>
+       
+    </div>
+
+     
+    <div class="form">
+
+        <h1>CADASTRO</h1>
+
+
+        
+        <input id="nome" type="text" placeholder="Nome" required >  <br> <br>
+        <input id="idade" type="number" placeholder="Idade" required > <br> <br>
+        <input id="sexo" type="text" placeholder="Sexo" required > <br> <br>
+        <input id="naci" type="text" placeholder="Nacionalidade" required > <br> <br> <br> <br>
+        <input type="checkbox" id="proteger"  name="proteger" required >  <br> <br>
+        <button  onclick="conf()"> Confirma </button>
+        <button id="con" onclick="apag()"> Apagar </button>
+
+        </div>
+
+
+        <span class="check"> <p id="check">Todas as informações são verdadeiras</p> </span> 
+
+
+        <script>
+
+            function validar() {
+
+                let = document.getElementById("nome").value;
+                let = document.getElementById("sexo").value;
+                let = document.getElementById("idade").value;
+                let = document.getElementById("naci").value;
+                
+    if (nome === "") 
+        alert ("Prencha o nome!")
+                
+
+
+                
+                
+
+            }
+
+            function conf() {
+
+
+//Para fazer a validação dos campo!
+
+                let nome = document.getElementById("nome").value;
+                let sexo = document.getElementById("sexo").value;
+                let idade = document.getElementById("idade").value;
+                let naci = document.getElementById("naci").value;
+                let proteger =  document.getElementById("proteger").checked;
+
+                
+    if (nome === "") {
+        alert ("Prencha o nome!");
+        return;
+    }
+    if (sexo === "") {
+        alert ("Prencha o sexo!");
+        return;
+    }
+    if (idade === "") {
+        alert ("Prencha a idade!");
+        return;
+    }
+    if (naci === "") {
+        alert ("Prencha a nacionalidade!");
+        return;
+    }
+    if (!proteger) {
+        alert ("Confirme as infomações!");
+        return;
+    }
+
+
+                document.getElementById("nome").value = "";
+                document.getElementById("sexo").value = "";
+                document.getElementById("idade").value = "";
+                document.getElementById("naci").value = "";
+                document.getElementById("proteger").checked = false; //Para fazer o checkd em branco.
+
+
+                 alert ("Muito obrigado pelo seu cadastro!")
+                 
+
+        
+                
+                
+            }
+
+            function apag() {
+
+                document.getElementById("nome").value = "";
+                document.getElementById("sexo").value = "";
+                document.getElementById("idade").value = "";
+                document.getElementById("naci").value = "";
+                document.getElementById("proteger").checked = false; //Para fazer o checkd em branco.
+
+
+                alert ("As informações foram apagadas!")
+
+             
+                
+
+            }
+
+        </script>
+
+   
+    
+</body>
+</html>
